@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "title": "Michel eduardo | Saúde Funcional",
+    "description": "Saúde Funcional personalizada para mulheres 40+, idosos e famílias no Canadá. Mais disposição, autonomia e qualidade de vida com hábitos sustentáveis."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Sobre",
+    "functionalHealth": "Saúde Funcional",
+    "programs": "Programas",
+    "blog": "Blog",
+    "assessment": "Avaliação",
+    "contact": "Contato",
+    "whatsapp": "WhatsApp",
+    "menuOpen": "Abrir menu",
+    "menuClose": "Fechar menu",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Viva com mais energia, autonomia e bem-estar",
+    "subtitle": "Saúde Funcional é uma abordagem integrada que cuida do seu corpo, mente e hábitos — para você viver melhor hoje e envelhecer com saúde.",
+    "benefit1": "Atendimento humanizado e personalizado",
+    "benefit2": "Foco na prevenção e qualidade de vida",
+    "benefit3": "Hábitos sustentáveis para o dia a dia",
+    "cta": "Agendar pelo WhatsApp",
+    "ctaSecondary": "Fazer autoavaliação"
+  },
+  "benefits": {
+    "title": "Benefícios que transformam sua rotina",
+    "subtitle": "Pequenas mudanças consistentes geram grandes resultados ao longo do tempo.",
+    "energy": {
+      "title": "Mais disposição",
+      "description": "Recupere energia para suas atividades diárias com hábitos alinhados ao seu corpo."
+    },
+    "autonomy": {
+      "title": "Mais autonomia",
+      "description": "Mantenha independência e confiança para realizar o que é importante para você."
+    },
+    "quality": {
+      "title": "Melhor qualidade de vida",
+      "description": "Durma melhor, mova-se com prazer e sinta-se bem em todas as fases da vida."
+    },
+    "habits": {
+      "title": "Hábitos sustentáveis",
+      "description": "Construa rotinas realistas que você consegue manter a longo prazo."
+    }
+  },
+  "howItWorks": {
+    "title": "Como funciona",
+    "subtitle": "Um processo simples, acolhedor e focado em você.",
+    "step1": {
+      "title": "Conversa inicial",
+      "description": "Entendemos sua história, rotina e objetivos de saúde de forma acolhedora."
+    },
+    "step2": {
+      "title": "Plano personalizado",
+      "description": "Criamos um plano integrado com movimento, nutrição, sono e bem-estar mental."
+    },
+    "step3": {
+      "title": "Acompanhamento contínuo",
+      "description": "Ajustamos juntos ao longo do caminho, celebrando cada conquista."
+    }
+  },
+  "testimonials": {
+    "title": "Depoimentos",
+    "subtitle": "Histórias reais de transformação estão chegando em breve.",
+    "placeholder": "Em breve você poderá ler depoimentos de clientes que transformaram sua qualidade de vida."
+  },
+  "cta": {
+    "title": "Pronto para dar o primeiro passo?",
+    "subtitle": "Agende uma conversa pelo WhatsApp. Sem compromisso, com todo acolhimento.",
+    "button": "Falar pelo WhatsApp"
+  },
+  "about": {
+    "metaTitle": "Sobre | Michel eduardo",
+    "metaDescription": "Conheça a história, missão e abordagem de Michel eduardo em Saúde Funcional no Canadá.",
+    "title": "Sobre mim",
+    "history": {
+      "title": "Minha história",
+      "p1": "Sou Michel eduardo, profissional dedicado à Saúde Funcional com foco em qualidade de vida, prevenção e envelhecimento saudável.",
+      "p2": "Ao longo da minha trajetória, acompanhei mulheres acima de 40 anos, idosos e famílias que buscavam mais energia, autonomia e bem-estar — não apenas tratamentos pontuais, mas uma vida mais plena.",
+      "p3": "Minha experiência me ensinou que cada pessoa tem uma história única. Por isso, meu trabalho é ouvir, acolher e construir caminhos personalizados."
+    },
+    "mission": {
+      "title": "Minha missão",
+      "description": "Empoderar pessoas a cuidarem de si com consciência, gentileza e consistência — transformando conhecimento em hábitos que duram."
+    },
+    "vision": {
+      "title": "Minha visão da Saúde Funcional",
+      "description": "Acredito que saúde é a capacidade de viver com vitalidade, propósito e conexão. Não se trata de perfeição, mas de equilíbrio sustentável entre corpo, mente e ambiente."
+    },
+    "differentials": {
+      "title": "Diferenciais",
+      "item1": "Atendimento humanizado e individualizado",
+      "item2": "Abordagem integrada dos pilares da saúde",
+      "item3": "Foco em prevenção e longevidade saudável",
+      "item4": "Planos realistas e adaptados à sua rotina",
+      "item5": "Atendimento em português e inglês no Canadá"
+    },
+    "education": {
+      "title": "Formação",
+      "placeholder": "Espaço reservado para atualização da formação acadêmica e certificações."
+    }
+  },
+  "functionalHealth": {
+    "metaTitle": "Saúde Funcional | O que é e seus pilares",
+    "metaDescription": "Entenda o que é Saúde Funcional e como os pilares de movimento, sono, nutrição e mais impactam sua qualidade de vida.",
+    "title": "O que é Saúde Funcional?",
+    "intro": "Saúde Funcional é uma abordagem que vai além de tratar sintomas isolados. Ela busca identificar e equilibrar as causas raiz dos desequilíbrios, integrando corpo, mente, hábitos e ambiente para promover vitalidade duradoura.",
+    "pillarsTitle": "Os 9 pilares da Saúde Funcional",
+    "pillarsSubtitle": "Cada pilar é uma peça essencial do quebra-cabeça do seu bem-estar.",
+    "movement": { "title": "Movimento", "description": "Atividade física adaptada à sua realidade e fase de vida.", "benefit": "Mais força, mobilidade e confiança no dia a dia." },
+    "sleep": { "title": "Sono", "description": "Qualidade e regularidade do descanso noturno.", "benefit": "Recuperação, clareza mental e energia renovada." },
+    "nutrition": { "title": "Nutrição", "description": "Alimentação consciente, anti-inflamatória e personalizada.", "benefit": "Mais vitalidade e melhor funcionamento do corpo." },
+    "mentalHealth": { "title": "Saúde Mental", "description": "Gestão do estresse, emoções e equilíbrio psicológico.", "benefit": "Mais calma, foco e resiliência emocional." },
+    "breathing": { "title": "Respiração", "description": "Técnicas de respiração consciente para regulação do sistema nervoso.", "benefit": "Redução de ansiedade e maior presença no momento." },
+    "spirituality": { "title": "Espiritualidade", "description": "Conexão com valores, fé ou propósito interior.", "benefit": "Senso de significado e paz interior." },
+    "nature": { "title": "Natureza", "description": "Contato com ambientes naturais e exposição à luz solar.", "benefit": "Melhor humor, imunidade e conexão com o mundo." },
+    "purpose": { "title": "Propósito", "description": "Direção de vida alinhada aos seus valores e sonhos.", "benefit": "Motivação sustentável para cuidar de si." },
+    "social": { "title": "Ecossistema Social", "description": "Relacionamentos saudáveis e rede de apoio.", "benefit": "Mais pertencimento, alegria e suporte emocional." },
+    "benefitLabel": "Benefício"
+  },
+  "programs": {
+    "metaTitle": "Programas | Saúde Funcional",
+    "metaDescription": "Conheça os programas de Saúde Funcional: Vitalidade 40+, Longevidade Ativa, Família Saudável e mais.",
+    "title": "Programas",
+    "subtitle": "Programas pensados para diferentes momentos da vida, sempre com abordagem personalizada.",
+    "learnMore": "Quero saber mais",
+    "vitalidade": {
+      "title": "Vitalidade 40+",
+      "description": "Programa focado em mulheres acima de 40 anos que desejam mais energia, equilíbrio hormonal e bem-estar.",
+      "benefits": "Mais disposição, sono reparador, nutrição anti-inflamatória",
+      "audience": "Mulheres 40+ buscando prevenção e qualidade de vida"
+    },
+    "longevidade": {
+      "title": "Longevidade Ativa",
+      "description": "Para idosos e pessoas 60+ que querem manter autonomia, força e independência.",
+      "benefits": "Mobilidade, força funcional, prevenção de quedas",
+      "audience": "Idosos e pessoas 60+ que valorizam independência"
+    },
+    "familia": {
+      "title": "Família Saudável",
+      "description": "Programa para famílias que desejam criar hábitos saudáveis juntos, de forma leve e sustentável.",
+      "benefits": "Rotinas familiares, alimentação consciente, movimento em grupo",
+      "audience": "Famílias com crianças, adolescentes ou cuidadores"
+    },
+    "prevencao": {
+      "title": "Prevenção Integrada",
+      "description": "Abordagem preventiva para quem busca evitar doenças crônicas e envelhecer com saúde.",
+      "benefits": "Avaliação holística, plano personalizado, acompanhamento contínuo",
+      "audience": "Adultos focados em prevenção e longevidade"
+    }
+  },
+  "assessment": {
+    "metaTitle": "Autoavaliação | Saúde Funcional",
+    "metaDescription": "Faça uma autoavaliação rápida do seu sono, alimentação, energia e estresse. Receba orientações personalizadas.",
+    "title": "Autoavaliação de Saúde",
+    "subtitle": "Responda com sinceridade. Leva menos de 2 minutos.",
+    "sleep": "Como está seu sono?",
+    "nutrition": "Como está sua alimentação?",
+    "exercise": "Você pratica atividade física?",
+    "energy": "Como está seu nível de energia?",
+    "stress": "Como está seu estresse?",
+    "options": {
+      "excellent": "Excelente",
+      "good": "Bom",
+      "fair": "Regular",
+      "poor": "Precisa melhorar",
+      "yes": "Sim, regularmente",
+      "sometimes": "Às vezes",
+      "no": "Não pratico"
+    },
+    "submit": "Ver meu resultado",
+    "resultTitle": "Seu resultado",
+    "resultExcellent": "Parabéns! Você está em um bom caminho. Um acompanhamento profissional pode ajudar a otimizar ainda mais seus resultados.",
+    "resultGood": "Você tem uma base sólida, mas há espaço para melhorias. Vamos conversar sobre como potencializar seu bem-estar.",
+    "resultFair": "Alguns pilares da sua saúde precisam de atenção. Agende uma conversa — juntos podemos criar um plano personalizado.",
+    "resultPoor": "Sua saúde merece cuidado agora. Não espere — agende uma avaliação e dê o primeiro passo rumo a mais qualidade de vida.",
+    "cta": "Agendar avaliação pelo WhatsApp",
+    "consent": "Concordo com o uso dos meus dados conforme a Política de Privacidade."
+  },
+  "blog": {
+    "metaTitle": "Blog | Saúde Funcional",
+    "metaDescription": "Artigos sobre Saúde Funcional, sono, nutrição, exercícios após os 40 e envelhecimento saudável.",
+    "title": "Blog",
+    "subtitle": "Conteúdo educativo para você cuidar melhor da sua saúde.",
+    "search": "Buscar artigos...",
+    "allCategories": "Todas",
+    "readMore": "Ler artigo",
+    "related": "Artigos relacionados",
+    "noResults": "Nenhum artigo encontrado.",
+    "categories": {
+      "functionalHealth": "Saúde Funcional",
+      "sleep": "Sono",
+      "nutrition": "Nutrição",
+      "exercise": "Exercício",
+      "aging": "Envelhecimento",
+      "womensHealth": "Saúde da Mulher",
+      "breathing": "Respiração"
+    }
+  },
+  "contact": {
+    "metaTitle": "Contato | Michel eduardo",
+    "metaDescription": "Entre em contato com Michel eduardo. Formulário, WhatsApp, redes sociais e horário de atendimento.",
+    "title": "Contato",
+    "subtitle": "Estou aqui para ouvir você. Escolha a forma de contato que preferir.",
+    "name": "Nome completo",
+    "email": "E-mail",
+    "phone": "WhatsApp",
+    "message": "Mensagem",
+    "send": "Enviar mensagem",
+    "whatsappButton": "Falar pelo WhatsApp",
+    "hours": "Horário de atendimento",
+    "social": "Redes sociais",
+    "mapTitle": "Localização",
+    "mapPlaceholder": "Mapa em breve",
+    "consent": "Concordo com o tratamento dos meus dados conforme a Política de Privacidade e autorizo o contato.",
+    "success": "Mensagem enviada! Em breve entraremos em contato.",
+    "required": "Campo obrigatório"
+  },
+  "footer": {
+    "description": "Saúde Funcional personalizada para você viver com mais energia, autonomia e bem-estar no Canadá.",
+    "navigation": "Navegação",
+    "legal": "Legal",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Uso",
+    "rights": "Todos os direitos reservados."
+  },
+  "cookies": {
+    "message": "Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa Política de Privacidade.",
+    "accept": "Aceitar",
+    "decline": "Recusar",
+    "settings": "Configurações"
+  },
+  "privacy": {
+    "metaTitle": "Política de Privacidade",
+    "metaDescription": "Política de Privacidade de Michel eduardo. Saiba como seus dados são coletados, usados e protegidos.",
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última atualização: julho de 2026",
+    "content": "Esta Política de Privacidade descreve como Michel eduardo coleta, usa e protege seus dados pessoais, em conformidade com a LGPD e leis canadenses de proteção de dados (PIPEDA). Coletamos apenas dados necessários para contato e prestação de serviços. Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelo e-mail de contato."
+  },
+  "terms": {
+    "metaTitle": "Termos de Uso",
+    "metaDescription": "Termos de Uso do site de Michel eduardo. Leia as condições de utilização do conteúdo e serviços.",
+    "title": "Termos de Uso",
+    "lastUpdated": "Última atualização: julho de 2026",
+    "content": "Ao utilizar este site, você concorda com estes Termos de Uso. O conteúdo é informativo e não substitui consulta profissional. Michel eduardo reserva-se o direito de atualizar estes termos a qualquer momento."
+  },
+  "trust": {
+    "humanized": "Atendimento humanizado",
+    "prevention": "Foco na prevenção",
+    "sustainable": "Hábitos sustentáveis",
+    "quality": "Qualidade de vida"
+  },
+  "common": {
+    "learnMore": "Saiba mais",
+    "backToHome": "Voltar ao início",
+    "loading": "Carregando..."
+  },
+  "notFound": {
+    "message": "Página não encontrada",
+    "backHome": "Voltar ao início"
+  }
+}

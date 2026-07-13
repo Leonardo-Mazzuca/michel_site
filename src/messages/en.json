@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "title": "Michel eduardo | Functional Health",
+    "description": "Personalized Functional Health for women 40+, seniors, and families in Canada. More energy, autonomy, and quality of life through sustainable habits."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "functionalHealth": "Functional Health",
+    "programs": "Programs",
+    "blog": "Blog",
+    "assessment": "Assessment",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Live with more energy, autonomy, and well-being",
+    "subtitle": "Functional Health is an integrated approach that cares for your body, mind, and habits — so you live better today and age healthily.",
+    "benefit1": "Humanized, personalized care",
+    "benefit2": "Focus on prevention and quality of life",
+    "benefit3": "Sustainable daily habits",
+    "cta": "Schedule via WhatsApp",
+    "ctaSecondary": "Take self-assessment"
+  },
+  "benefits": {
+    "title": "Benefits that transform your routine",
+    "subtitle": "Small, consistent changes create big results over time.",
+    "energy": {
+      "title": "More energy",
+      "description": "Regain vitality for daily activities with habits aligned to your body."
+    },
+    "autonomy": {
+      "title": "More autonomy",
+      "description": "Maintain independence and confidence to do what matters most to you."
+    },
+    "quality": {
+      "title": "Better quality of life",
+      "description": "Sleep better, move with joy, and feel good at every stage of life."
+    },
+    "habits": {
+      "title": "Sustainable habits",
+      "description": "Build realistic routines you can maintain for the long term."
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "A simple, welcoming process focused on you.",
+    "step1": {
+      "title": "Initial conversation",
+      "description": "We understand your story, routine, and health goals in a warm, supportive way."
+    },
+    "step2": {
+      "title": "Personalized plan",
+      "description": "We create an integrated plan covering movement, nutrition, sleep, and mental well-being."
+    },
+    "step3": {
+      "title": "Ongoing support",
+      "description": "We adjust together along the way, celebrating every achievement."
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "Real transformation stories are coming soon.",
+    "placeholder": "Soon you'll be able to read testimonials from clients who transformed their quality of life."
+  },
+  "cta": {
+    "title": "Ready to take the first step?",
+    "subtitle": "Schedule a conversation via WhatsApp. No commitment, full support.",
+    "button": "Chat on WhatsApp"
+  },
+  "about": {
+    "metaTitle": "About | Michel eduardo",
+    "metaDescription": "Learn about Michel eduardo's story, mission, and Functional Health approach in Canada.",
+    "title": "About me",
+    "history": {
+      "title": "My story",
+      "p1": "I'm Michel eduardo, a professional dedicated to Functional Health with a focus on quality of life, prevention, and healthy aging.",
+      "p2": "Throughout my journey, I've supported women over 40, seniors, and families seeking more energy, autonomy, and well-being — not just quick fixes, but a fuller life.",
+      "p3": "My experience taught me that every person has a unique story. That's why my work is to listen, welcome, and build personalized paths."
+    },
+    "mission": {
+      "title": "My mission",
+      "description": "Empower people to care for themselves with awareness, kindness, and consistency — turning knowledge into lasting habits."
+    },
+    "vision": {
+      "title": "My vision of Functional Health",
+      "description": "I believe health is the ability to live with vitality, purpose, and connection. It's not about perfection, but sustainable balance between body, mind, and environment."
+    },
+    "differentials": {
+      "title": "What sets me apart",
+      "item1": "Humanized, individualized care",
+      "item2": "Integrated approach to health pillars",
+      "item3": "Focus on prevention and healthy longevity",
+      "item4": "Realistic plans adapted to your routine",
+      "item5": "Care in Portuguese and English in Canada"
+    },
+    "education": {
+      "title": "Education",
+      "placeholder": "Space reserved for academic background and certifications."
+    }
+  },
+  "functionalHealth": {
+    "metaTitle": "Functional Health | What it is and its pillars",
+    "metaDescription": "Learn what Functional Health is and how pillars like movement, sleep, nutrition, and more impact your quality of life.",
+    "title": "What is Functional Health?",
+    "intro": "Functional Health goes beyond treating isolated symptoms. It identifies and balances root causes of imbalance, integrating body, mind, habits, and environment to promote lasting vitality.",
+    "pillarsTitle": "The 9 pillars of Functional Health",
+    "pillarsSubtitle": "Each pillar is an essential piece of your well-being puzzle.",
+    "movement": { "title": "Movement", "description": "Physical activity adapted to your reality and life stage.", "benefit": "More strength, mobility, and confidence in daily life." },
+    "sleep": { "title": "Sleep", "description": "Quality and regularity of nighttime rest.", "benefit": "Recovery, mental clarity, and renewed energy." },
+    "nutrition": { "title": "Nutrition", "description": "Conscious, anti-inflammatory, personalized eating.", "benefit": "More vitality and better body function." },
+    "mentalHealth": { "title": "Mental Health", "description": "Stress management, emotions, and psychological balance.", "benefit": "More calm, focus, and emotional resilience." },
+    "breathing": { "title": "Breathing", "description": "Conscious breathing techniques for nervous system regulation.", "benefit": "Reduced anxiety and greater presence in the moment." },
+    "spirituality": { "title": "Spirituality", "description": "Connection with values, faith, or inner purpose.", "benefit": "Sense of meaning and inner peace." },
+    "nature": { "title": "Nature", "description": "Contact with natural environments and sunlight exposure.", "benefit": "Better mood, immunity, and connection with the world." },
+    "purpose": { "title": "Purpose", "description": "Life direction aligned with your values and dreams.", "benefit": "Sustainable motivation to care for yourself." },
+    "social": { "title": "Social Ecosystem", "description": "Healthy relationships and support network.", "benefit": "More belonging, joy, and emotional support." },
+    "benefitLabel": "Benefit"
+  },
+  "programs": {
+    "metaTitle": "Programs | Functional Health",
+    "metaDescription": "Explore Functional Health programs: Vitality 40+, Active Longevity, Healthy Family, and more.",
+    "title": "Programs",
+    "subtitle": "Programs designed for different life stages, always with a personalized approach.",
+    "learnMore": "Learn more",
+    "vitalidade": {
+      "title": "Vitality 40+",
+      "description": "A program for women over 40 seeking more energy, hormonal balance, and well-being.",
+      "benefits": "More energy, restorative sleep, anti-inflammatory nutrition",
+      "audience": "Women 40+ focused on prevention and quality of life"
+    },
+    "longevidade": {
+      "title": "Active Longevity",
+      "description": "For seniors and people 60+ who want to maintain autonomy, strength, and independence.",
+      "benefits": "Mobility, functional strength, fall prevention",
+      "audience": "Seniors and people 60+ who value independence"
+    },
+    "familia": {
+      "title": "Healthy Family",
+      "description": "A program for families who want to build healthy habits together, in a light and sustainable way.",
+      "benefits": "Family routines, conscious eating, group movement",
+      "audience": "Families with children, teens, or caregivers"
+    },
+    "prevencao": {
+      "title": "Integrated Prevention",
+      "description": "A preventive approach for those seeking to avoid chronic disease and age healthily.",
+      "benefits": "Holistic assessment, personalized plan, ongoing support",
+      "audience": "Adults focused on prevention and longevity"
+    }
+  },
+  "assessment": {
+    "metaTitle": "Self-Assessment | Functional Health",
+    "metaDescription": "Take a quick self-assessment of your sleep, nutrition, energy, and stress. Get personalized guidance.",
+    "title": "Health Self-Assessment",
+    "subtitle": "Answer honestly. It takes less than 2 minutes.",
+    "sleep": "How is your sleep?",
+    "nutrition": "How is your nutrition?",
+    "exercise": "Do you practice physical activity?",
+    "energy": "How is your energy level?",
+    "stress": "How is your stress level?",
+    "options": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "fair": "Fair",
+      "poor": "Needs improvement",
+      "yes": "Yes, regularly",
+      "sometimes": "Sometimes",
+      "no": "I don't exercise"
+    },
+    "submit": "See my result",
+    "resultTitle": "Your result",
+    "resultExcellent": "Congratulations! You're on a good path. Professional guidance can help optimize your results even further.",
+    "resultGood": "You have a solid foundation, but there's room for improvement. Let's talk about how to boost your well-being.",
+    "resultFair": "Some pillars of your health need attention. Schedule a conversation — together we can create a personalized plan.",
+    "resultPoor": "Your health deserves care now. Don't wait — schedule an assessment and take the first step toward better quality of life.",
+    "cta": "Schedule assessment via WhatsApp",
+    "consent": "I agree to the use of my data according to the Privacy Policy."
+  },
+  "blog": {
+    "metaTitle": "Blog | Functional Health",
+    "metaDescription": "Articles on Functional Health, sleep, nutrition, exercise after 40, and healthy aging.",
+    "title": "Blog",
+    "subtitle": "Educational content to help you take better care of your health.",
+    "search": "Search articles...",
+    "allCategories": "All",
+    "readMore": "Read article",
+    "related": "Related articles",
+    "noResults": "No articles found.",
+    "categories": {
+      "functionalHealth": "Functional Health",
+      "sleep": "Sleep",
+      "nutrition": "Nutrition",
+      "exercise": "Exercise",
+      "aging": "Aging",
+      "womensHealth": "Women's Health",
+      "breathing": "Breathing"
+    }
+  },
+  "contact": {
+    "metaTitle": "Contact | Michel eduardo",
+    "metaDescription": "Contact Michel eduardo. Form, WhatsApp, social media, and business hours.",
+    "title": "Contact",
+    "subtitle": "I'm here to listen. Choose your preferred way to reach out.",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "WhatsApp",
+    "message": "Message",
+    "send": "Send message",
+    "whatsappButton": "Chat on WhatsApp",
+    "hours": "Business hours",
+    "social": "Social media",
+    "mapTitle": "Location",
+    "mapPlaceholder": "Map coming soon",
+    "consent": "I agree to the processing of my data according to the Privacy Policy and authorize contact.",
+    "success": "Message sent! We'll be in touch soon.",
+    "required": "Required field"
+  },
+  "footer": {
+    "description": "Personalized Functional Health so you can live with more energy, autonomy, and well-being in Canada.",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "rights": "All rights reserved."
+  },
+  "cookies": {
+    "message": "We use cookies to improve your experience. By continuing, you agree to our Privacy Policy.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "settings": "Settings"
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy",
+    "metaDescription": "Michel eduardo Privacy Policy. Learn how your data is collected, used, and protected.",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: July 2026",
+    "content": "This Privacy Policy describes how Michel eduardo collects, uses, and protects your personal data, in compliance with LGPD and Canadian data protection laws (PIPEDA). We collect only data necessary for contact and service delivery. You may request access, correction, or deletion of your data at any time via the contact email."
+  },
+  "terms": {
+    "metaTitle": "Terms of Use",
+    "metaDescription": "Michel eduardo website Terms of Use. Read the conditions for using content and services.",
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: July 2026",
+    "content": "By using this website, you agree to these Terms of Use. Content is informational and does not replace professional consultation. Michel eduardo reserves the right to update these terms at any time."
+  },
+  "trust": {
+    "humanized": "Humanized care",
+    "prevention": "Focus on prevention",
+    "sustainable": "Sustainable habits",
+    "quality": "Quality of life"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "backToHome": "Back to home",
+    "loading": "Loading..."
+  },
+  "notFound": {
+    "message": "Page not found",
+    "backHome": "Back to home"
+  }
+}

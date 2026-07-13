@@ -2,25 +2,52 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #262626;
+  --sage-50: #f0f5f1;
+  --sage-100: #dce8df;
+  --sage-400: #8fb89a;
+  --sage-500: #6b9e78;
+  --sage-600: #558a63;
+  --sage-700: #437050;
+  --sage-800: #365a41;
+  --sky-50: #f0f7fc;
+  --sky-100: #dceef8;
+  --sky-500: #7eb8da;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-400: var(--sage-400);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+  --color-sage-700: var(--sage-700);
+  --color-sage-800: var(--sage-800);
+  --color-sky-50: var(--sky-50);
+  --color-sky-100: var(--sky-100);
+  --color-sky-500: var(--sky-500);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sage-500);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--sage-100);
+  color: var(--sage-800);
 }
