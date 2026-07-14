@@ -53,8 +53,8 @@ export async function Hero({ locale }: HeroProps) {
               src="/images/michele-eduardo.jpg"
               alt={
                 locale === "pt"
-                  ? "Michel eduardo - Profissional de Saúde Funcional"
-                  : "Michel eduardo - Functional Health Professional"
+                  ? "Michel Eduardo - Profissional de Saúde Funcional"
+                  : "Michel Eduardo - Functional Health Professional"
               }
               fill
               priority

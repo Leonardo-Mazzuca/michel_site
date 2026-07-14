@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/config";
-import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { InstagramLinks } from "@/components/ui/InstagramLinks";
 import { Mail, MapPin } from "lucide-react";
 
 interface FooterProps {
@@ -42,16 +42,7 @@ export async function Footer({ locale }: FooterProps) {
               <Mail className="h-4 w-4 text-sage-600" aria-hidden="true" />
               {siteConfig.email}
             </a>
-            <a
-              href={siteConfig.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 flex items-center gap-2 text-sm text-neutral-600 hover:text-sage-700"
-              aria-label="Instagram"
-            >
-              <InstagramIcon className="h-4 w-4 text-sage-600" />
-              @personalmicheleduardo
-            </a>
+            <InstagramLinks locale={locale} className="mt-2" />
           </div>
 
           <div>

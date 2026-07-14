@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { generatePageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/config";
-import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { InstagramLinks } from "@/components/ui/InstagramLinks";
 import { Clock, MapPin } from "lucide-react";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -61,15 +61,7 @@ export default async function ContactPage({ params }: Props) {
 
           <Card hover={false}>
             <h3 className="font-semibold text-neutral-800">{t("social")}</h3>
-            <a
-              href={siteConfig.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-2 text-sage-700 hover:text-sage-800"
-            >
-              <InstagramIcon className="h-5 w-5" />
-              @personalmicheleduardo
-            </a>
+            <InstagramLinks locale={locale as "pt" | "en"} iconSize="h-5 w-5" className="mt-3" />
           </Card>
 
           <Card hover={false}>
