@@ -35,8 +35,8 @@ export default async function PrivacyPage({ params }: Props) {
           </p>
           <p>
             {locale === "pt"
-              ? "Você pode revogar seu consentimento a qualquer momento entrando em contato pelo e-mail informado no site."
-              : "You may revoke your consent at any time by contacting us via the email provided on the website."}
+              ? "Você pode revogar seu consentimento a qualquer momento entrando em contato pelo WhatsApp ou pelo site Life Up."
+              : "You may revoke your consent at any time by contacting us via WhatsApp or the Life Up website."}
           </p>
         </div>
       </Card>

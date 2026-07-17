@@ -63,8 +63,9 @@
   },
   "testimonials": {
     "title": "Testimonials",
-    "subtitle": "Real transformation stories are coming soon.",
-    "placeholder": "Soon you'll be able to read testimonials from clients who transformed their quality of life."
+    "subtitle": "Real transformation stories with Functional Health.",
+    "featuredTitle": "🌿 Synthesis — My Life with Functional Health (2020 → 2026)",
+    "featuredContent": "Since the pandemic, when I began applying the Life Up methodology, my life went through a profound transformation. At 59, I live with a biological age of 30, a direct result of a consistent and intelligent functional routine.\n\nI gained vitality, vigor, and daily energy. My body works with precision: aligned body fat percentage, high mobility, preserved agility, light joints, clear mind. For years I haven't known what it is to be sick — my immune system responds like someone much younger.\n\nFunctional health reorganized my body from within: regulated sleep, intelligent movement, functional nutrition, clear purpose, conscious breathing, and adjusted ecosystem. This put me on a solid path to old age with autonomy, strength, disposition, and active longevity.\n\nToday I'm walking toward 60 with the real feeling of living my 30s again — only with wisdom, awareness, and true health."
   },
   "cta": {
     "title": "Ready to take the first step?",
@@ -201,22 +202,13 @@
   },
   "contact": {
     "metaTitle": "Contact | Michel Eduardo",
-    "metaDescription": "Contact Michel Eduardo. Form, WhatsApp, social media, and business hours.",
+    "metaDescription": "Contact Michel Eduardo via WhatsApp or visit Life Up at lifeupfit.ca.",
     "title": "Contact",
-    "subtitle": "I'm here to listen. Choose your preferred way to reach out.",
-    "name": "Full name",
-    "email": "Email",
-    "phone": "WhatsApp",
-    "message": "Message",
-    "send": "Send message",
+    "subtitle": "Reach me on WhatsApp or explore Life Up.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappDescription": "Schedule a conversation directly with me. I'm here to listen.",
     "whatsappButton": "Chat on WhatsApp",
-    "hours": "Business hours",
-    "social": "Social media",
-    "mapTitle": "Location",
-    "mapPlaceholder": "Map coming soon",
-    "consent": "I agree to the processing of my data according to the Privacy Policy and authorize contact.",
-    "success": "Message sent! We'll be in touch soon.",
-    "required": "Required field"
+    "lifeUpDescription": "Discover the Life Up methodology and Functional Health ecosystem."
   },
   "footer": {
     "description": "Personalized Functional Health so you can live with more energy, autonomy, and well-being.",
@@ -224,7 +216,8 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "whatsappContact": "WhatsApp"
   },
   "cookies": {
     "message": "We use cookies to improve your experience. By continuing, you agree to our Privacy Policy.",

@@ -63,8 +63,9 @@
   },
   "testimonials": {
     "title": "Depoimentos",
-    "subtitle": "Histórias reais de transformação estão chegando em breve.",
-    "placeholder": "Em breve você poderá ler depoimentos de clientes que transformaram sua qualidade de vida."
+    "subtitle": "Histórias reais de transformação com Saúde Funcional.",
+    "featuredTitle": "🌿 Síntese — Minha Vida com a Saúde Funcional (2020 → 2026)",
+    "featuredContent": "Desde a pandemia, quando comecei a aplicar a metodologia Life Up, minha vida passou por uma transformação profunda. Aos 59 anos, vivo com idade biológica de 30, resultado direto de uma rotina funcional consistente e inteligente.\n\nGanhei vitalidade, vigor e energia diária. Meu corpo funciona com precisão: percentual de gordura alinhado, mobilidade alta, agilidade preservada, articulações leves, mente clara. Há anos não sei o que é ficar doente — meu sistema imune responde como o de alguém muito mais jovem.\n\nA saúde funcional reorganizou meu corpo por dentro: sono regulado, movimento inteligente, alimentação funcional, propósito claro, respiração consciente e ecossistema ajustado. Isso me colocou em um caminho sólido para a terceira idade com autonomia, força, disposição e longevidade ativa.\n\nHoje caminho para os 60 com a sensação real de estar vivendo meus 30 anos novamente — só que com sabedoria, consciência e saúde de verdade."
   },
   "cta": {
     "title": "Pronto para dar o primeiro passo?",
@@ -201,22 +202,13 @@
   },
   "contact": {
     "metaTitle": "Contato | Michel Eduardo",
-    "metaDescription": "Entre em contato com Michel Eduardo. Formulário, WhatsApp, redes sociais e horário de atendimento.",
+    "metaDescription": "Entre em contato com Michel Eduardo pelo WhatsApp ou visite a Life Up em lifeupfit.ca.",
     "title": "Contato",
-    "subtitle": "Estou aqui para ouvir você. Escolha a forma de contato que preferir.",
-    "name": "Nome completo",
-    "email": "E-mail",
-    "phone": "WhatsApp",
-    "message": "Mensagem",
-    "send": "Enviar mensagem",
+    "subtitle": "Fale comigo pelo WhatsApp ou conheça a Life Up.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappDescription": "Agende uma conversa diretamente comigo. Estou aqui para ouvir você.",
     "whatsappButton": "Falar pelo WhatsApp",
-    "hours": "Horário de atendimento",
-    "social": "Redes sociais",
-    "mapTitle": "Localização",
-    "mapPlaceholder": "Mapa em breve",
-    "consent": "Concordo com o tratamento dos meus dados conforme a Política de Privacidade e autorizo o contato.",
-    "success": "Mensagem enviada! Em breve entraremos em contato.",
-    "required": "Campo obrigatório"
+    "lifeUpDescription": "Conheça a metodologia Life Up e o ecossistema de Saúde Funcional."
   },
   "footer": {
     "description": "Saúde Funcional personalizada para você viver com mais energia, autonomia e bem-estar.",
@@ -224,7 +216,8 @@
     "legal": "Legal",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Uso",
-    "rights": "Todos os direitos reservados."
+    "rights": "Todos os direitos reservados.",
+    "whatsappContact": "WhatsApp"
   },
   "cookies": {
     "message": "Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa Política de Privacidade.",

@@ -47,10 +47,7 @@ export function JsonLd({ locale, type = "website", article }: JsonLdProps) {
         locale === "pt" ? "Profissional de Saúde Funcional" : "Functional Health Professional",
       url: baseUrl,
       image: `${baseUrl}/images/michele-eduardo.jpg`,
-      sameAs: [
-        siteConfig.instagram.canada.url,
-        siteConfig.instagram.brazil.url,
-      ],
+      sameAs: [siteConfig.lifeUp.url],
       address: {
         "@type": "PostalAddress",
         addressLocality: "London",

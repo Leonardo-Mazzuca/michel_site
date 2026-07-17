@@ -1,8 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/config";
-import { InstagramLinks } from "@/components/ui/InstagramLinks";
-import { Mail, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 interface FooterProps {
   locale: "pt" | "en";
@@ -35,14 +34,22 @@ export async function Footer({ locale }: FooterProps) {
               <MapPin className="h-4 w-4 text-sage-600" aria-hidden="true" />
               {siteConfig.address[locale]}
             </div>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="mt-2 flex items-center gap-2 text-sm text-neutral-600 hover:text-sage-700"
-            >
-              <Mail className="h-4 w-4 text-sage-600" aria-hidden="true" />
-              {siteConfig.email}
-            </a>
-            <InstagramLinks locale={locale} className="mt-2" />
+            <div className="mt-4 space-y-2">
+              <a
+                href={siteConfig.lifeUp.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm font-medium text-sage-700 hover:text-sage-800"
+              >
+                {siteConfig.lifeUp.name} — {siteConfig.lifeUp.display}
+              </a>
+              <Link
+                href="/contato"
+                className="block text-sm text-neutral-600 hover:text-sage-700"
+              >
+                {t("whatsappContact")}
+              </Link>
+            </div>
           </div>
 
           <div>
