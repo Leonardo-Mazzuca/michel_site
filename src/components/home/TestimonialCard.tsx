@@ -5,9 +5,18 @@ interface TestimonialCardProps {
   name: string;
   meta: string;
   badge?: string;
-  image: string;
+  image?: string;
   imageAlt: string;
   content: string;
+}
+
+function getInitials(name: string): string {
+  return name
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
 }
 
 export function TestimonialCard({
@@ -21,13 +30,21 @@ export function TestimonialCard({
   return (
     <Card className="flex h-full flex-col overflow-hidden p-0">
       <div className="relative aspect-[4/3] w-full bg-neutral-100">
-        <Image
-          src={image}
-          alt={imageAlt}
-          fill
-          className="object-cover object-center"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-        />
+        {image ? (
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 1280px) 100vw, 33vw"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-sage-500 via-sage-600 to-sky-600">
+            <span className="text-5xl font-bold tracking-tight text-white/90 md:text-6xl">
+              {getInitials(name)}
+            </span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/50 via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
           {badge && (

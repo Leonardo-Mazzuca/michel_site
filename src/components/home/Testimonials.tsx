@@ -13,13 +13,13 @@ export async function Testimonials() {
     <Section background="soft" id="depoimentos">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
-      <div className="grid gap-8 lg:grid-cols-2">
-        {clientTestimonials.map(({ key, image }) => (
+      <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+        {clientTestimonials.map(({ key, image, badge }) => (
           <TestimonialCard
             key={key}
             name={t(`items.${key}.name`)}
             meta={t(`items.${key}.meta`)}
-            badge={key === "marise" ? t("items.marise.badge") : undefined}
+            badge={badge ? t("items.marise.badge") : undefined}
             image={image}
             imageAlt={t(`items.${key}.imageAlt`)}
             content={t(`items.${key}.content`)}

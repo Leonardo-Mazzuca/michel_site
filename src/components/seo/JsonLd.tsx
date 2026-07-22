@@ -63,8 +63,8 @@ export function JsonLd({ locale, type = "website", article }: JsonLdProps) {
       url: `${baseUrl}/${locale}`,
       description:
         locale === "pt"
-          ? "Saúde Funcional personalizada no Canadá"
-          : "Personalized Functional Health in Canada",
+          ? "Saúde Funcional personalizada para mulheres 40+, idosos e famílias"
+          : "Personalized Functional Health for women 40+, seniors, and families",
       inLanguage: locale === "pt" ? "pt-BR" : "en-CA",
       publisher: {
         "@type": "Organization",
