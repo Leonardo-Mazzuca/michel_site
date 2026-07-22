@@ -16,5 +16,6 @@ export const clientTestimonials: ClientTestimonial[] = [
   },
   {
     key: "mirian",
+    image: "/images/testimonials/mirian.png",
   },
 ];
