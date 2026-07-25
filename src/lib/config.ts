@@ -5,7 +5,7 @@ export const siteConfig = {
     en: "Functional Health",
   },
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.coachmichelcanada.com",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "15551234567",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "12269779747",
   lifeUp: {
     name: "Life Up",
     url: "https://lifeupfit.ca",

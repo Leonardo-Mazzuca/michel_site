@@ -35,8 +35,8 @@ export async function Testimonials() {
         <div className="flex flex-col items-center gap-6 border-b border-neutral-100 bg-white p-6 sm:flex-row sm:items-start md:p-8">
           <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full shadow-md md:h-24 md:w-24">
             <Image
-              src="/images/michele-eduardo.jpg"
-              alt={siteConfig.name}
+              src="/images/about/michel-one-percent.png"
+              alt={t("featuredImageAlt")}
               fill
               className="object-cover object-top"
               sizes="96px"
