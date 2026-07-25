@@ -1,0 +1,22 @@
+{
+  "name": "Coach Michel — Saúde Funcional",
+  "short_name": "Coach Michel",
+  "description": "Saúde Funcional e Nutrição Funcional no Canadá com Coach Michel.",
+  "start_url": "/pt",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#558a63",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icon",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

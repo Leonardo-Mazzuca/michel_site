@@ -11,6 +11,7 @@ export interface BlogPost {
   slug: string;
   category: BlogCategory;
   date: string;
+  modifiedDate?: string;
   readTime: number;
   image?: string;
   pt: {

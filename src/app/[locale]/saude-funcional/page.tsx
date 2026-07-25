@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { CtaSection } from "@/components/home/CtaSection";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { generatePageMetadata } from "@/lib/metadata";
+import { type Locale } from "@/lib/seo";
 import {
   Activity,
   Moon,
@@ -22,7 +24,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generatePageMetadata({
-    locale: locale as "pt" | "en",
+    locale: locale as Locale,
     namespace: "functionalHealth",
     path: "/saude-funcional",
   });
@@ -43,12 +45,22 @@ const pillars = [
 export default async function FunctionalHealthPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const typedLocale = locale as Locale;
   const t = await getTranslations("functionalHealth");
+  const tNav = await getTranslations("nav");
 
   return (
     <>
       <Section background="gradient" className="pt-28">
-        <SectionHeader title={t("title")} />
+        <Breadcrumbs
+          locale={typedLocale}
+          items={[
+            { name: tNav("home"), path: "" },
+            { name: tNav("functionalHealth"), path: "/saude-funcional" },
+          ]}
+          className="mb-8"
+        />
+        <SectionHeader title={t("title")} as="h1" />
         <p className="mx-auto max-w-3xl text-center text-lg text-neutral-600">
           {t("intro")}
         </p>
@@ -83,7 +95,7 @@ export default async function FunctionalHealthPage({ params }: Props) {
         </div>
       </Section>
 
-      <CtaSection locale={locale as "pt" | "en"} />
+      <CtaSection locale={typedLocale} />
     </>
   );
 }

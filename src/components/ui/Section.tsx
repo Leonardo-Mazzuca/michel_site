@@ -28,18 +28,20 @@ interface SectionHeaderProps {
   title: string;
   subtitle?: string;
   centered?: boolean;
+  as?: "h1" | "h2";
 }
 
 export function SectionHeader({
   title,
   subtitle,
   centered = true,
+  as: Heading = "h2",
 }: SectionHeaderProps) {
   return (
     <div className={`mb-12 md:mb-16 ${centered ? "text-center" : ""}`}>
-      <h2 className="text-3xl font-bold tracking-tight text-neutral-800 md:text-4xl">
+      <Heading className="text-3xl font-bold tracking-tight text-neutral-800 md:text-4xl">
         {title}
-      </h2>
+      </Heading>
       {subtitle && (
         <p className="mt-4 max-w-2xl text-lg text-neutral-600 md:mx-auto">
           {subtitle}

@@ -6,8 +6,14 @@ import { Benefits } from "@/components/home/Benefits";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { Testimonials } from "@/components/home/Testimonials";
 import { CtaSection } from "@/components/home/CtaSection";
-import { JsonLd } from "@/components/seo/JsonLd";
-import { siteConfig } from "@/lib/config";
+import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
+import { generatePageMetadata } from "@/lib/metadata";
+import {
+  getOrganizationSchema,
+  getPersonSchema,
+  getWebsiteSchema,
+  type Locale,
+} from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -15,51 +21,34 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  const url = `${siteConfig.url}/${locale}`;
-
-  return {
-    title: t("title"),
-    description: t("description"),
-    alternates: {
-      canonical: url,
-      languages: {
-        pt: `${siteConfig.url}/pt`,
-        en: `${siteConfig.url}/en`,
-      },
-    },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url,
-      siteName: siteConfig.name,
-      locale: locale === "pt" ? "pt_BR" : "en_CA",
-      type: "website",
-      images: [
-        {
-          url: `${siteConfig.url}/images/michele-eduardo.jpg`,
-          width: 800,
-          height: 1000,
-          alt: siteConfig.name,
-        },
-      ],
-    },
-  };
+  return generatePageMetadata({
+    locale: locale as Locale,
+    namespace: "metadata",
+    path: "",
+    titleKey: "title",
+    descriptionKey: "description",
+  });
 }
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const typedLocale = locale as Locale;
 
   return (
     <>
-      <JsonLd locale={locale as "pt" | "en"} type="website" />
-      <JsonLd locale={locale as "pt" | "en"} type="person" />
-      <Hero locale={locale as "pt" | "en"} />
+      <JsonLdGraph
+        schemas={[
+          getWebsiteSchema(typedLocale),
+          getOrganizationSchema(typedLocale),
+          getPersonSchema(typedLocale),
+        ]}
+      />
+      <Hero locale={typedLocale} />
       <Benefits />
       <HowItWorks />
       <Testimonials />
-      <CtaSection locale={locale as "pt" | "en"} />
+      <CtaSection locale={typedLocale} />
     </>
   );
 }

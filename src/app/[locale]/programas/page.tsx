@@ -5,8 +5,10 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { CtaSection } from "@/components/home/CtaSection";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { generatePageMetadata } from "@/lib/metadata";
 import { getWhatsAppMessages } from "@/lib/whatsapp";
+import { type Locale } from "@/lib/seo";
 import { Users } from "lucide-react";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -14,7 +16,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generatePageMetadata({
-    locale: locale as "pt" | "en",
+    locale: locale as Locale,
     namespace: "programs",
     path: "/programas",
   });
@@ -25,29 +27,39 @@ const programs = ["vitalidade", "longevidade", "familia", "prevencao"] as const;
 export default async function ProgramsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const typedLocale = locale as Locale;
   const t = await getTranslations("programs");
-  const messages = getWhatsAppMessages(locale as "pt" | "en");
+  const tNav = await getTranslations("nav");
+  const messages = getWhatsAppMessages(typedLocale);
 
   return (
     <>
       <Section background="gradient" className="pt-28">
-        <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+        <Breadcrumbs
+          locale={typedLocale}
+          items={[
+            { name: tNav("home"), path: "" },
+            { name: tNav("programs"), path: "/programas" },
+          ]}
+          className="mb-8"
+        />
+        <SectionHeader title={t("title")} subtitle={t("subtitle")} as="h1" />
       </Section>
 
       <Section background="white">
         <div className="grid gap-8 md:grid-cols-2">
           {programs.map((program) => (
             <Card key={program} className="flex flex-col">
-              <h3 className="text-xl font-bold text-neutral-800">
+              <h2 className="text-xl font-bold text-neutral-800">
                 {t(`${program}.title`)}
-              </h3>
+              </h2>
               <p className="mt-3 flex-1 text-neutral-600">
                 {t(`${program}.description`)}
               </p>
               <div className="mt-4 space-y-2 text-sm">
                 <p>
                   <span className="font-semibold text-sage-700">
-                    {locale === "pt" ? "Benefícios:" : "Benefits:"}
+                    {typedLocale === "pt" ? "Benefícios:" : "Benefits:"}
                   </span>{" "}
                   {t(`${program}.benefits`)}
                 </p>
@@ -61,7 +73,7 @@ export default async function ProgramsPage({ params }: Props) {
               </div>
               <div className="mt-6">
                 <WhatsAppButton
-                  locale={locale as "pt" | "en"}
+                  locale={typedLocale}
                   message={`${messages.program} (${t(`${program}.title`)})`}
                 >
                   {t("learnMore")}
@@ -72,7 +84,7 @@ export default async function ProgramsPage({ params }: Props) {
         </div>
       </Section>
 
-      <CtaSection locale={locale as "pt" | "en"} />
+      <CtaSection locale={typedLocale} />
     </>
   );
 }

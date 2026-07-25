@@ -53,8 +53,8 @@ export async function Hero({ locale }: HeroProps) {
               src="/images/michele-eduardo.jpg"
               alt={
                 locale === "pt"
-                  ? "Michel Eduardo - Profissional de Saúde Funcional"
-                  : "Michel Eduardo - Functional Health Professional"
+                  ? "Coach Michel Eduardo — Saúde Funcional e Health Coach no Canadá"
+                  : "Coach Michel Eduardo — Functional Health Coach in Canada"
               }
               fill
               priority

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { siteConfig } from "@/lib/config";
-
-type Locale = "pt" | "en";
+import { buildPageMetadata, type Locale } from "@/lib/seo";
 
 interface PageMetadataOptions {
   locale: Locale;
   titleKey?: string;
   descriptionKey?: string;
+  keywordsKey?: string;
   namespace?: string;
   path?: string;
 }
@@ -16,44 +16,46 @@ export async function generatePageMetadata({
   locale,
   titleKey = "metaTitle",
   descriptionKey = "metaDescription",
+  keywordsKey = "metaKeywords",
   namespace = "metadata",
   path = "",
 }: PageMetadataOptions): Promise<Metadata> {
   const t = await getTranslations(namespace);
   const title = t(titleKey);
   const description = t(descriptionKey);
-  const url = `${siteConfig.url}/${locale}${path}`;
+  const keywordsRaw = t(keywordsKey);
+  const keywords = keywordsRaw.split(",").map((keyword) => keyword.trim());
 
-  return {
+  return buildPageMetadata({
+    locale,
     title,
     description,
-    alternates: {
-      canonical: url,
-      languages: {
-        pt: `${siteConfig.url}/pt${path}`,
-        en: `${siteConfig.url}/en${path}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url,
-      siteName: siteConfig.name,
-      locale: locale === "pt" ? "pt_BR" : "en_CA",
-      type: "website",
-      images: [
-        {
-          url: `${siteConfig.url}/images/michele-eduardo.jpg`,
-          width: 800,
-          height: 1000,
-          alt: siteConfig.name,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-    },
-  };
+    keywords,
+    path,
+  });
 }
+
+export const rootSiteMetadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.seo.siteName,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.seo.organizationName,
+  icons: {
+    icon: [{ url: "/icon", type: "image/png", sizes: "32x32" }],
+    apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }],
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.seo.siteName,
+    statusBarStyle: "default",
+  },
+  other: {
+    "mobile-web-app-capable": "yes",
+  },
+};

@@ -5,8 +5,14 @@ import type { Metadata } from "next";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { CtaSection } from "@/components/home/CtaSection";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { generatePageMetadata } from "@/lib/metadata";
+import {
+  getOrganizationSchema,
+  getPersonSchema,
+  type Locale,
+} from "@/lib/seo";
 import { CheckCircle } from "lucide-react";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -14,7 +20,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generatePageMetadata({
-    locale: locale as "pt" | "en",
+    locale: locale as Locale,
     namespace: "about",
     path: "/sobre",
   });
@@ -23,15 +29,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const typedLocale = locale as Locale;
   const t = await getTranslations("about");
+  const tNav = await getTranslations("nav");
 
   const differentials = ["item1", "item2", "item3", "item4", "item5"] as const;
 
   return (
     <>
-      <JsonLd locale={locale as "pt" | "en"} type="person" />
+      <JsonLdGraph
+        schemas={[
+          getPersonSchema(typedLocale),
+          getOrganizationSchema(typedLocale),
+        ]}
+      />
       <Section background="gradient" className="pt-28">
-        <SectionHeader title={t("title")} />
+        <Breadcrumbs
+          locale={typedLocale}
+          items={[
+            { name: tNav("home"), path: "" },
+            { name: tNav("about"), path: "/sobre" },
+          ]}
+          className="mb-8"
+        />
+        <SectionHeader title={t("title")} as="h1" />
       </Section>
 
       <Section background="white">
@@ -47,7 +68,11 @@ export default async function AboutPage({ params }: Props) {
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-lg">
             <Image
               src="/images/michele-eduardo.jpg"
-              alt={t("title")}
+              alt={
+                typedLocale === "pt"
+                  ? "Coach Michel Eduardo — Saúde Funcional no Canadá"
+                  : "Coach Michel Eduardo — Functional Health Coach in Canada"
+              }
               fill
               className="object-cover object-top"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -116,7 +141,7 @@ export default async function AboutPage({ params }: Props) {
         </Card>
       </Section>
 
-      <CtaSection locale={locale as "pt" | "en"} />
+      <CtaSection locale={typedLocale} />
     </>
   );
 }

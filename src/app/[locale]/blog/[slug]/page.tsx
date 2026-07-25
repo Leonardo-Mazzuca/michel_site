@@ -6,10 +6,16 @@ import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { CtaSection } from "@/components/home/CtaSection";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { blogPosts, getPostBySlug, getRelatedPosts } from "@/data/blog";
-import { siteConfig } from "@/lib/config";
-import { ArrowLeft, Clock } from "lucide-react";
+import {
+  buildPageMetadata,
+  getArticleSchema,
+  getPersonSchema,
+  type Locale,
+} from "@/lib/seo";
+import { Clock } from "lucide-react";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -21,66 +27,99 @@ export function generateStaticParams() {
   );
 }
 
+function getBlogKeywords(locale: Locale, category: string): string[] {
+  const shared =
+    locale === "pt"
+      ? ["Coach Michel", "Saúde Funcional", "Nutrição Funcional", "Canadá", "bem-estar"]
+      : ["Coach Michel", "Functional Health", "Functional Nutrition", "Canada", "well-being"];
+
+  const categoryKeywords: Record<string, string[]> =
+    locale === "pt"
+      ? {
+          functionalHealth: ["longevidade", "inflamação"],
+          sleep: ["sono", "recuperação"],
+          nutrition: ["nutrição funcional", "saúde intestinal", "anti-inflamatório"],
+          exercise: ["performance", "movimento"],
+          aging: ["longevidade", "envelhecimento saudável"],
+          womensHealth: ["mulheres 40+", "bem-estar"],
+          breathing: ["respiração", "saúde mental"],
+        }
+      : {
+          functionalHealth: ["longevity", "inflammation"],
+          sleep: ["sleep", "recovery"],
+          nutrition: ["gut health", "anti-inflammatory"],
+          exercise: ["performance", "movement"],
+          aging: ["healthy aging", "longevity"],
+          womensHealth: ["women 40+", "well-being"],
+          breathing: ["breathing", "mental health"],
+        };
+
+  return [...shared, ...(categoryKeywords[category] ?? [])];
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const content = post[locale as "pt" | "en"];
-  const url = `${siteConfig.url}/${locale}/blog/${slug}`;
+  const typedLocale = locale as Locale;
+  const content = post[typedLocale];
+  const modifiedTime = post.modifiedDate ?? post.date;
 
-  return {
-    title: content.title,
+  return buildPageMetadata({
+    locale: typedLocale,
+    title: `${content.title} | Coach Michel`,
     description: content.metaDescription,
-    alternates: {
-      canonical: url,
-      languages: {
-        pt: `${siteConfig.url}/pt/blog/${slug}`,
-        en: `${siteConfig.url}/en/blog/${slug}`,
-      },
-    },
-    openGraph: {
-      title: content.title,
-      description: content.metaDescription,
-      url,
-      type: "article",
-      publishedTime: post.date,
-    },
-  };
+    keywords: getBlogKeywords(typedLocale, post.category),
+    path: `/blog/${slug}`,
+    type: "article",
+    publishedTime: post.date,
+    modifiedTime,
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
+  const typedLocale = locale as Locale;
   const t = await getTranslations("blog");
+  const tNav = await getTranslations("nav");
 
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const content = post[locale as "pt" | "en"];
+  const content = post[typedLocale];
   const related = getRelatedPosts(slug, post.category);
+  const modifiedTime = post.modifiedDate ?? post.date;
+  const keywords = getBlogKeywords(typedLocale, post.category);
 
   return (
     <>
-      <JsonLd
-        locale={locale as "pt" | "en"}
-        type="article"
-        article={{
-          title: content.title,
-          description: content.metaDescription,
-          date: post.date,
-          slug,
-        }}
+      <JsonLdGraph
+        schemas={[
+          getArticleSchema({
+            locale: typedLocale,
+            title: content.title,
+            description: content.metaDescription,
+            slug,
+            datePublished: post.date,
+            dateModified: modifiedTime,
+            keywords,
+          }),
+          getPersonSchema(typedLocale),
+        ]}
       />
 
       <Section background="gradient" className="pt-28">
-        <Link
-          href="/blog"
-          className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-sage-700 hover:text-sage-800"
-        >
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-          {t("title")}
-        </Link>
+        <Breadcrumbs
+          locale={typedLocale}
+          items={[
+            { name: tNav("home"), path: "" },
+            { name: tNav("blog"), path: "/blog" },
+            { name: content.title, path: `/blog/${slug}` },
+          ]}
+          className="mb-8"
+        />
 
         <span className="inline-block rounded-full bg-sage-50 px-3 py-1 text-sm font-medium text-sage-700">
           {t(`categories.${post.category}`)}
@@ -93,7 +132,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="mt-4 flex items-center gap-4 text-sm text-neutral-500">
           <time dateTime={post.date}>
             {new Date(post.date).toLocaleDateString(
-              locale === "pt" ? "pt-BR" : "en-CA",
+              typedLocale === "pt" ? "pt-BR" : "en-CA",
               { year: "numeric", month: "long", day: "numeric" }
             )}
           </time>
@@ -104,8 +143,11 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         <article className="prose prose-neutral mx-auto mt-10 max-w-3xl">
-          {content.content.split("\n\n").map((paragraph, i) => (
-            <p key={i} className="mb-4 text-lg leading-relaxed text-neutral-700">
+          {content.content.split("\n\n").map((paragraph) => (
+            <p
+              key={paragraph.slice(0, 40)}
+              className="mb-4 text-lg leading-relaxed text-neutral-700"
+            >
               {paragraph}
             </p>
           ))}
@@ -119,7 +161,7 @@ export default async function BlogPostPage({ params }: Props) {
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((rel) => {
-              const relContent = rel[locale as "pt" | "en"];
+              const relContent = rel[typedLocale];
               return (
                 <Link key={rel.slug} href={`/blog/${rel.slug}`}>
                   <Card className="h-full">
@@ -137,7 +179,7 @@ export default async function BlogPostPage({ params }: Props) {
         </Section>
       )}
 
-      <CtaSection locale={locale as "pt" | "en"} />
+      <CtaSection locale={typedLocale} />
     </>
   );
 }

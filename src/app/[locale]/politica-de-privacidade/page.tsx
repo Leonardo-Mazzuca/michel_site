@@ -3,14 +3,16 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { generatePageMetadata } from "@/lib/metadata";
+import { type Locale } from "@/lib/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generatePageMetadata({
-    locale: locale as "pt" | "en",
+    locale: locale as Locale,
     namespace: "privacy",
     path: "/politica-de-privacidade",
   });
@@ -19,22 +21,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PrivacyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const typedLocale = locale as Locale;
   const t = await getTranslations("privacy");
+  const tNav = await getTranslations("nav");
 
   return (
     <Section background="white" className="pt-28">
       <Card hover={false} className="mx-auto max-w-3xl">
+        <Breadcrumbs
+          locale={typedLocale}
+          items={[
+            { name: tNav("home"), path: "" },
+            { name: t("title"), path: "/politica-de-privacidade" },
+          ]}
+          className="mb-6"
+        />
         <h1 className="text-3xl font-bold text-neutral-800">{t("title")}</h1>
         <p className="mt-2 text-sm text-neutral-500">{t("lastUpdated")}</p>
         <div className="mt-8 space-y-4 text-neutral-700">
           <p>{t("content")}</p>
           <p>
-            {locale === "pt"
+            {typedLocale === "pt"
               ? "Dados coletados: nome, e-mail, WhatsApp e mensagens enviadas via formulário. Utilizamos esses dados exclusivamente para responder seu contato e prestar nossos serviços."
               : "Data collected: name, email, WhatsApp, and messages sent via form. We use this data exclusively to respond to your contact and provide our services."}
           </p>
           <p>
-            {locale === "pt"
+            {typedLocale === "pt"
               ? "Você pode revogar seu consentimento a qualquer momento entrando em contato pelo WhatsApp ou pelo site Life Up."
               : "You may revoke your consent at any time by contacting us via WhatsApp or the Life Up website."}
           </p>

@@ -132,6 +132,7 @@ export function AssessmentForm({ locale }: AssessmentFormProps) {
       <button
         type="submit"
         disabled={!allAnswered || !consent}
+        aria-label={t("submit")}
         className="w-full rounded-2xl bg-sage-600 px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-sage-700 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {t("submit")}
