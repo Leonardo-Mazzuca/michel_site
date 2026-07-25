@@ -54,6 +54,25 @@ export default async function AboutPage({ params }: Props) {
             />
           </div>
         </div>
+
+        <div className="mt-12 overflow-hidden rounded-3xl border-2 border-amber-400 bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 shadow-lg ring-4 ring-amber-200/60">
+          <div className="grid items-stretch lg:grid-cols-2">
+            <div className="relative min-h-[320px] lg:min-h-[420px]">
+              <Image
+                src="/images/about/michel-one-percent.png"
+                alt={t("history.onePercentImageAlt")}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div className="flex items-center p-8 md:p-10 lg:p-12">
+              <p className="text-lg font-medium leading-relaxed text-neutral-800 md:text-xl">
+                {t("history.onePercent")}
+              </p>
+            </div>
+          </div>
+        </div>
       </Section>
 
       <Section background="soft">

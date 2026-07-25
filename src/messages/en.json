@@ -64,7 +64,10 @@
   "testimonials": {
     "title": "Client reviews",
     "subtitle": "Real stories from people training with personalized coaching — online and in person.",
+    "readMore": "Read full review",
+    "readLess": "Show less",
     "featuredTitle": "🌿 Synthesis — My Life with Functional Health (2020 → 2026)",
+    "featuredExcerpt": "Since the pandemic, applying the Life Up methodology transformed my life. At 59, I live with a biological age of 30 — the result of a consistent, intelligent functional routine.",
     "featuredContent": "Since the pandemic, when I began applying the Life Up methodology, my life went through a profound transformation. At 59, I live with a biological age of 30, a direct result of a consistent and intelligent functional routine.\n\nI gained vitality, vigor, and daily energy. My body works with precision: aligned body fat percentage, high mobility, preserved agility, light joints, clear mind. For years I haven't known what it is to be sick — my immune system responds like someone much younger.\n\nFunctional health reorganized my body from within: regulated sleep, intelligent movement, functional nutrition, clear purpose, conscious breathing, and adjusted ecosystem. This put me on a solid path to old age with autonomy, strength, disposition, and active longevity.\n\nToday I'm walking toward 60 with the real feeling of living my 30s again — only with wisdom, awareness, and true health.",
     "items": {
       "marise": {
@@ -72,19 +75,36 @@
         "meta": "Online · Uberaba, MG, Brazil",
         "badge": "First client to join",
         "imageAlt": "Marise Cicci at the gym",
+        "excerpt": "At 63, MFIT Personal gave me the plan I needed: monthly workouts through the app, immediate support, and real results — even from a distance.",
         "content": "I've always enjoyed exercising — I do weight training, functional training, pilates… Now, at 63, I felt that having a plan aligned with exercise, nutrition, and quality of life would be wonderful!\n\nThat's when I reached out online to personal trainer Michel, who has been guiding me with monthly workouts. Through the app I can access each exercise demonstration and how many sets to do. Whenever I need to ask questions, I get an immediate response. First we fill out a form, take measurements and photos so we can compare and see satisfying results over time.\n\nIt's helping me stay focused, improve my sleep quality, build muscle, and learn about nutrition. I recommend it! This MFIT Personal method really helps us even from a distance, keeping me motivated and confident I'll reach my goals!"
       },
       "vitorSabrina": {
         "name": "Vitor and Sabrina",
         "meta": "London, Ontario — Canada",
         "imageAlt": "Vitor and Sabrina at the gym",
+        "excerpt": "As a couple, Michel transformed our routine with adapted workouts, dynamic classes, and support that goes far beyond fitness. Today he's a partner in our health and well-being.",
         "content": "We're Vitor and Sabrina, a couple in our mid-to-late 40s who decided to take our health, fitness, and quality of life seriously — and Michel has been a key part of this transformation. Since we started training with him, we've felt firsthand the difference of having an extremely dedicated, attentive professional committed to our goals, respecting our limitations and routine while encouraging us to go a little further each time.\n\nIn my case (Vitor), Michel has helped me a lot with back pain, adjusting workouts, posture, specific exercises, and always making sure movements are adapted so I can progress without getting hurt. Gradually, I've noticed improvements in strength, mobility, and especially less pain — something that directly impacts my daily life, work, and well-being. He patiently explains why each exercise matters, talks about heart rate, sleep, recovery, and builds workouts that truly fit my reality.\n\nFor Sabrina, who has always enjoyed physical activity and never struggled to stay committed, Michel added even more structure. He organized her dedication into well-thought-out plans aligned with her goals, respecting her pace while bringing variety and the right level of challenge. She channeled her existing motivation into safe, consistent progress with proper technique.\n\nAnother big difference is how dynamic and fun Michel's classes are, especially spinning. He curates the music, cadence, intensity variations, and creates a welcoming group atmosphere where everyone feels comfortable regardless of fitness level. We leave class sweaty and tired, but laughing, with a sense of accomplishment and eager to come back.\n\nBeyond the technical side, Michel inspires us to care for other aspects of health: sleep, nutrition, routine, balance between body, mind, and spirit. He shares articles, challenges, and explanations of how small daily habits affect weight, mood, and energy. It's not just a random workout — it's fuller support where we feel he truly cares about our progress and our story.\n\nAs a couple, training with Michel strengthened our commitment to a healthy lifestyle. He understands our dynamic, respects our schedules, jokes with us, pushes us when needed, and celebrates every win, no matter how small. Today we can say with confidence that Michel isn't just our personal trainer — he's a partner on this journey, helping us care for our health, self-esteem, and life together."
       },
       "mirian": {
         "name": "Mirian",
         "meta": "London, Ontario — Canada",
         "imageAlt": "Mirian, Life Up client",
+        "excerpt": "Doing 1% for yourself every day goes far beyond physical transformation. With Michel from Life UP, every small step becomes a better version of ourselves. 💪✨",
         "content": "Doing 1% for yourself every day goes far beyond physical transformation.\n\nIt's about caring for your mind, strengthening your emotions, building discipline, and proving to yourself that you're capable. It's investing in your health, your self-esteem, and the person you're becoming.\n\nHaving a professional like Michel from Life UP makes all the difference on this journey. More than training the body, he encourages habits that transform lives.\n\nEvery small step counts. In the end, that daily 1% becomes a much better version of ourselves. 💪✨"
+      },
+      "gabriel": {
+        "name": "Gabriel",
+        "meta": "London, Ontario — Canada",
+        "imageAlt": "Gabriel training with Michel at the gym",
+        "excerpt": "I highly recommend Michel! He pushes you to your limits with clear goals, breaks your routine, and challenges you with unexpected exercises. If you want to break plateaus, he's the trainer to see.",
+        "content": "I highly recommend working with Michel! I usually train on my own, but having him as a trainer has been an incredible experience. He is amazing at what he does and truly pushes you to your absolute limits, always keeping your specific objectives in mind.\n\nIt is so refreshing to have someone else push you out of your routine and challenge you with unconventional exercises. When you train with Michel, you definitely have to expect the unexpected. If you want to elevate your workouts and break through plateaus, he is the trainer to see!"
+      },
+      "naila": {
+        "name": "Naila",
+        "meta": "London, Ontario — Canada",
+        "imageAlt": "Naila, Life Up client",
+        "excerpt": "I barely stepped foot in the gym until I met Michel. He kept me motivated without pressure, tailoring every workout to my level with safety, support, and real progress.",
+        "content": "If you're someone who struggles to get into a consistent gym routine, do yourself a favor and book a session with Michel.\n\nI barely used to step foot in the gym and felt completely out of my element trying to get started. Michel changed all of that! He knew exactly how to keep me motivated without making things feel overwhelming. What I appreciate most is his ability to listen and tailor every single workout to my current fitness level—pushing me just enough to build confidence while making sure I'm doing things safely and effectively.\n\nIf you're looking for a trainer who is genuinely supportive, incredibly skilled, and knows how to meet you right where you are, Michel is the person to go to!"
       }
     }
   },
@@ -101,7 +121,9 @@
       "title": "My story",
       "p1": "I'm Michel Eduardo, a professional dedicated to Functional Health with a focus on quality of life, prevention, and healthy aging.",
       "p2": "Throughout my journey, I've supported women over 40, seniors, and families seeking more energy, autonomy, and well-being — not just quick fixes, but a fuller life.",
-      "p3": "My experience taught me that every person has a unique story. That's why my work is to listen, welcome, and build personalized paths."
+      "p3": "My experience taught me that every person has a unique story. That's why my work is to listen, welcome, and build personalized paths.",
+      "onePercent": "This \"No. 1\" means \"1% every day.\" A day has 1440 minutes. 1% of the day is 15 minutes. If you exercise for 15 minutes a day, in 3 months and 10 days you will be 100% better than today.",
+      "onePercentImageAlt": "Michel Eduardo showing the number one gesture"
     },
     "mission": {
       "title": "My mission",

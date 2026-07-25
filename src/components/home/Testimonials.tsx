@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { TestimonialCard } from "@/components/home/TestimonialCard";
+import { TestimonialCardBody } from "@/components/home/TestimonialCardBody";
 import { clientTestimonials } from "@/data/testimonials";
 import { siteConfig } from "@/lib/config";
 
@@ -13,7 +14,7 @@ export async function Testimonials() {
     <Section background="soft" id="depoimentos">
       <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
-      <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-6 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
         {clientTestimonials.map(({ key, image, badge }) => (
           <TestimonialCard
             key={key}
@@ -22,14 +23,17 @@ export async function Testimonials() {
             badge={badge ? t("items.marise.badge") : undefined}
             image={image}
             imageAlt={t(`items.${key}.imageAlt`)}
+            excerpt={t(`items.${key}.excerpt`)}
             content={t(`items.${key}.content`)}
+            readMore={t("readMore")}
+            readLess={t("readLess")}
           />
         ))}
       </div>
 
-      <Card hover={false} className="mx-auto mt-12 max-w-3xl">
-        <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
-          <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full shadow-md">
+      <Card hover={false} className="mx-auto mt-10 max-w-3xl overflow-hidden p-0 md:mt-12">
+        <div className="flex flex-col items-center gap-6 border-b border-neutral-100 bg-white p-6 sm:flex-row sm:items-start md:p-8">
+          <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full shadow-md md:h-24 md:w-24">
             <Image
               src="/images/michele-eduardo.jpg"
               alt={siteConfig.name}
@@ -46,13 +50,12 @@ export async function Testimonials() {
           </div>
         </div>
 
-        <blockquote className="mt-8 space-y-4 leading-relaxed text-neutral-700">
-          {t("featuredContent")
-            .split("\n\n")
-            .map((paragraph) => (
-              <p key={paragraph.slice(0, 24)}>{paragraph}</p>
-            ))}
-        </blockquote>
+        <TestimonialCardBody
+          excerpt={t("featuredExcerpt")}
+          content={t("featuredContent")}
+          readMore={t("readMore")}
+          readLess={t("readLess")}
+        />
       </Card>
     </Section>
   );
