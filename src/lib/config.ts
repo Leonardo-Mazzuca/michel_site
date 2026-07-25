@@ -4,7 +4,7 @@ export const siteConfig = {
     pt: "Saúde Funcional",
     en: "Functional Health",
   },
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://micheleeduardo.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.coachmichelcanada.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "15551234567",
   lifeUp: {
     name: "Life Up",
