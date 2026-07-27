@@ -1,5 +1,5 @@
 type ClientTestimonial = {
-  key: "marise" | "vitorSabrina" | "mirian" | "gabriel" | "naila" | "valesca";
+  key: "marise" | "vitorSabrina" | "mirian" | "gabriel" | "naila" | "valesca" | "gladys";
   image?: string;
   badge?: boolean;
 };
@@ -29,5 +29,9 @@ export const clientTestimonials: ClientTestimonial[] = [
   {
     key: "valesca",
     image: "/images/testimonials/valesca.png",
+  },
+  {
+    key: "gladys",
+    image: "/images/testimonials/gladys.png",
   },
 ];
