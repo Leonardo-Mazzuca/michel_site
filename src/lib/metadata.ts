@@ -42,8 +42,12 @@ export const rootSiteMetadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.seo.organizationName,
   icons: {
-    icon: [{ url: "/icon", type: "image/png", sizes: "32x32" }],
-    apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }],
+    icon: [
+      { url: "/images/brand/lifeup-icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/images/brand/lifeup-icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/images/brand/lifeup-icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/images/brand/lifeup-icon.png", type: "image/png", sizes: "180x180" }],
   },
   formatDetection: {
     email: false,
