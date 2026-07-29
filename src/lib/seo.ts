@@ -4,10 +4,10 @@ import { siteConfig } from "@/lib/config";
 export type Locale = "pt" | "en";
 
 export const OG_IMAGE = {
-  url: "/images/og-default.jpg",
+  url: "/images/og-lifeup.jpg",
   width: 1200,
   height: 630,
-  alt: "Coach Michel — Saúde Funcional no Canadá",
+  alt: "Life UP! Fitness & Wellness — Coach Michel",
 } as const;
 
 export function absoluteUrl(path = ""): string {
